@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Favicon-->
+        <link rel="shortcut icon" href="img_calculator.png" type="image/png">
+        <!--Link CSS-->
+        <link rel="stylesheet" href="css/stylebmi.css">
+        <title>Body Mass Index Calculator</title>
+    </head>
+    <body>
+	
+        <!--Header-->
+        <header id="main-header">
+            <img src="man-icon.png" alt="icon of a man with dimensioned body" class="icon">
+            <h1 class="header-text">BODY MASS INDEX</h1>
+        </header>
+		
+		<!--Main Container-->
+        <main>
+            <div class="main-content">
+			<!-- BMI Container -->
+                <div class="bmi-container">
+				
+					<!-- BMI Container Header-->
+                    <header class="bmi-container-header">
+                        <p>Keep Your Weight and Health In Check</p>
+                    </header>
+					<!-- BMI Body -->
+					<div class="bmi-body">
+					
+							<!-- BMI Computation -->
+							<div class="bmi-computation-container">
+								
+				
+								<!-- Data form -->
+								<div class="form-input">
+									<input type="number" id="height-input" placeholder="Height in metre" class ="user-input" name="height" required>
+									<!-- Error Handling -->
+									<span class="error" style=" color:red; font-weight:bold; font-family:Segoe UI Symbol, sans-serif;" id="validate-height"></span>
+									<input type="number" id="weight-input" placeholder="Weight in kilogram" class="user-input" name="weight" required>
+									<!-- Error Handling -->
+									<span class="error" style=" color:red; font-weight:bold; font-family:Segoe UI Symbol, sans-serif;" id="validate-weight"></span>	
+								</div>
+								<button class="calc-btn">Compute BMI</button>
+
+								<!-- BMI Result -->
+								<div id="comment">
+									<p><b>Your Body Mass Index is</b> <span id="bmival"></span></p>
+									<p id="remark"></p><br>
+									<span style="font-size:0.7rem; font-weight:bolder;">- World Health Organisation(W.H.O)<span>
+								</div>
+
+							</div>
+							
+							<!-- --------------------Unit Converter -------------------------- -->
+							<div class="unit-converter">
+							
+								<!-- Converter Header -->
+								<header class="converter-header">
+									<img src="converter-icon.png" alt="Converter Icon" class="converter-icon">
+									<h4 class="converter-header-text">Unit Converter</h4>
+								</header>
+								
+								<!-- Weight Converter -->
+								<div class="converter">
+								<label class="field-legend">Weight</label>
+									<fieldset>
+										
+										<p><input type="number" id="lb"value="">lb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>->&nbsp;&nbsp;</span><input id="lbkg" disabled value="">kg</p>
+										<p><input type="number" id="pound" value="">pound&nbsp;&nbsp;<span>-></span>&nbsp;&nbsp;&nbsp;<input disabled id="poundkg" value="">kg</p>
+										<p><input type="number" id="calories" value="">calories&nbsp;&nbsp;<span>-></span>&nbsp;<input disabled id="calkg" value="">kg</p>
+									</fieldset>
+								</div>
+								
+								<!-----------Height Converter---------->
+								<div class="converter">
+								<label class="field-legend">Height</label>
+									<fieldset>
+										<p><input type="number" id="ft"value="">ft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>-></span>&nbsp;&nbsp;&nbsp;<input id="ftm" disabled value="">metre</p>
+										<p><input type="number" id="inch" value="">inch&nbsp;&nbsp;<span>-></span>&nbsp;&nbsp;<input disabled id="inchm" value="">metre</p>
+										<p><input type="number" id="cm" value="">cm&nbsp;&nbsp;&nbsp;<span>-></span>&nbsp;&nbsp;&nbsp;<input disabled id="cmm" value="">metre</p>
+									</fieldset>
+								</div>
+								</div>
+							</div>
+					</div>
+                </div>
+            </div>
+		</main>
+		<script src="js/bmi-calc-js.js"></script>
+    </body>
+</html>
